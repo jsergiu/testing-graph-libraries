@@ -5,6 +5,7 @@ import './App.css'
 
 import HomePage from './pages/HomePage/HomePage'
 import RechartsPage from './pages/RechartsPage/RechartsPage'
+import ReactVisPage from './pages/ReactVisPage/ReactVisPage'
 
 class App extends Component {
   render() {
@@ -14,13 +15,13 @@ class App extends Component {
           <ul className="Nav">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/recharts">Recharts</Link></li>
-            <li><Link to="/recharts">test</Link></li>
-            <li><Link to="/recharts">test</Link></li>
+            <li><Link to="/reactvis">React Vis</Link></li>
           </ul>
           <div className="Page-content">
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/recharts" component={RechartsPage} />
+              <Route exact path="/reactvis" component={ReactVisPage} />
             </Switch>
           </div>
         </div>

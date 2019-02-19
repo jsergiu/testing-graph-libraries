@@ -36,7 +36,7 @@ export default class RechartsPage extends PureComponent {
                 <br />
                 <p><strong>Notes:</strong></p>
                 <ul>
-                    <li><a href="https://github.com/jsergiu/testing-graph-libraries/blob/master/src/pages/RechartsPage/RechartsPage.js" target="_blank">Source code</a></li>
+                    <li><a href="https://github.com/jsergiu/testing-graph-libraries/blob/master/src/pages/RechartsPage/RechartsPage.js" target="_blank" rel="noopener noreferrer">Source code</a></li>
                     <li>Nice that is composable. You can create a styled yAxis component and reuse it in multiple charts;</li>
                     <li>Issue: I set ticksCount=6 but it displays more than 6 ticks;</li>
                     <li>Issue: sometimes the vertical lines in the grid and the labels are missaligned</li>
