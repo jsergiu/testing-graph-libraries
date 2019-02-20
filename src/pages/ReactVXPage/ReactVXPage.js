@@ -3,7 +3,6 @@ import { Group } from '@vx/group';
 import { LinePath } from '@vx/shape';
 import { curveMonotoneX } from '@vx/curve';
 import { genDateValue } from '@vx/mock-data';
-import { AxisBottom } from '@vx/axis'
 import { scaleTime, scaleLinear } from '@vx/scale';
 import { extent, max } from 'd3-array';
 
@@ -14,7 +13,6 @@ export default class ReactVXPage extends PureComponent {
             return genDateValue(25);
         });
     }
-
 
     render() {
         const series = this.genLines(2);
@@ -54,11 +52,10 @@ export default class ReactVXPage extends PureComponent {
                                         data={d}
                                         x={d => xScale(x(d))}
                                         y={d => yScale(y(d))}
-                                        stroke={'#ffffff'}
+                                        stroke={'#fe4e1e'}
                                         strokeWidth={1}
-                                        curve={i % 2 == 0 ? curveMonotoneX : undefined}
+                                        curve={i % 2 === 0 ? curveMonotoneX : undefined}
                                     />
-                                    <AxisBottom/>
                                 </Group>
                             );
                         })}
@@ -68,7 +65,6 @@ export default class ReactVXPage extends PureComponent {
                 <p><strong>Notes:</strong></p>
                 <ul>
                     <li><a href="https://github.com/jsergiu/testing-graph-libraries/blob/master/src/pages/ReactVXPage/ReactVXPage.js" target="_blank" rel="noopener noreferrer">Source code</a></li>
-                    <li>Pretty similar to d3;</li>
                     <li>Issue: Still in BETA!</li>
                     <li>Issue: Doesn't support interactions</li>
                     <li>Issue: Github project not very active. It's only one guy developing the project</li>
